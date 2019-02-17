@@ -34,5 +34,8 @@
 		{{ range .Site.Params.customCSS }}
 		<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
 		{{ end }}
+
+		{{ partial "seo_schema" . }}
+
 		<link rel="canonical" href="https://zeroequalsfalse.press" />
 	</head>
