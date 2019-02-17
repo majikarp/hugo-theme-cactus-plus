@@ -10,8 +10,4 @@
 	{{ range $key, $val := .Site.Params.Links }}
 		<a href="{{ $val }}">{{ $key }}</a>
 	{{ end }}
-
-	{{ if .Site.Params.enableRSS }}
-	<a class="cta" href="{{ .Site.RSSLink }}">{{ with .Site.Params.subscribe }}{{ . }}{{ else }}Subscribe{{ end }}</a>
-	{{ end }}
 </nav>

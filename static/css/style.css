@@ -123,7 +123,7 @@ body {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 300px;
     letter-spacing: -1px;
     color: #222;
     font-weight: bold;
@@ -183,14 +183,14 @@ nav.main-nav a {
     top: 8px;
     right: 6px;
     padding: 8px 12px;
-    color: #5badf0;
+    color:black;
     font-size: 13px;
     line-height: 1.35;
     border-radius: 3px;
 }
 
 nav.main-nav a.cta {
-    background: #5badf0;
+    background:black;
     color: #fff;
     margin-left: 12px;
 }
@@ -207,7 +207,7 @@ nav.main-nav a.cta {
       top: 8px;
       right: 6px;
       padding: 8px 8px;
-      color: #5badf0;
+      color:black;
       font-size: 13px;
       line-height: 1.35;
       border-radius: 3px;
@@ -246,7 +246,7 @@ nav.main-nav a.cta {
 
 a, #title, #post-list a:hover, #title:hover {
     text-decoration: none;
-    color: #5badf0;
+    color:black;
     color: #5694f1;
 }
 
