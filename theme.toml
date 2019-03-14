@@ -6,6 +6,8 @@ homepage = "https://github.com/nodejh/hugo-theme-cactus-plus"
 tags = ["blog", "beautiful", "disqus", "rss", "syntax highlighting", "tags"]
 features = ["blog", "beautiful", "disqus", "rss", "syntax highlighting", "tags"]
 min_version = 0.20
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
 
 [author]
   name = "nodejh"
