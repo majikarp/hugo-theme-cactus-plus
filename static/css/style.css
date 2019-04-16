@@ -60,6 +60,11 @@ table {
     font-style: normal;
 }
 
+.highlight pre {
+  background-color: inherit;
+  color: #f8f8f2;
+}
+
 [class^="icon-"]:before, [class*=" icon-"]:before {
     font-family: "icons";
     font-style: normal;
