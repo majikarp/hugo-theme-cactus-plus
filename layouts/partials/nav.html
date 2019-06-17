@@ -5,6 +5,7 @@
 	{{ end }}
 
 	<a href='https://open.spotify.com/show/49DGq88ZiMu0a5gH9rhkAi'>{{ with .Site.Params.podcast }}{{ . }}{{ else }}Podcast{{ end }}</a>	
+	<a href='{{ .Site.BaseURL }}'>{{ with .Site.Params.home }}{{ . }}{{ else }}CV{{ end }}</a>
 	<a href='{{ .Site.BaseURL }}posts'>{{ with .Site.Params.archive }}{{ . }}{{ else }}Archive{{ end }}</a>
 	<a href='{{ .Site.BaseURL }}tags'>{{ with .Site.Params.tags }}{{ . }}{{ else }}Tags{{ end }}</a>
 	<a href='{{ .Site.BaseURL }}about'>{{ with .Site.Params.about }}{{ . }}{{ else }}About{{ end }}</a>

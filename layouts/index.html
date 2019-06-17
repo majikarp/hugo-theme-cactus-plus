@@ -1,10 +1,106 @@
     {{ partial "seo_schema" . }}
   	{{ partial "head.html" . }}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<body>
     {{ partial "nav.html" . }}
 
     {{ partial "profile.html" . }}
 
+<div class="banner" style="padding:15px; text-align:center;">
+<div class="banner-content">
+<h1>Get the Ultimate Developer's CV</h1>
+<p>Personal Website + CV for Only 99 cents!</p>
+
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Buy Kit
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+
+        <img src="/images/sample.JPG"/>
+
+     
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p>Build a CV/Resume that stands out.
+        <p>Fill in your details, and generate your own CV website.</p>
+        <p>Deploy it anywhere. We recommend Netlify for best results.</p>
+        
+        </p>
+          <h4 class="modal-title">Choose Payment Option</h4>
+          <br>
+      <!-- Set up a container element for the button -->
+      <div id="paypal-button-container"></div>
+
+      <!-- Include the PayPal JavaScript SDK -->
+      <script src="https://www.paypal.com/sdk/js?client-id=AR_laU9Ib6LMp7xmuPLcineI-FYACMbHOYM0RqhpzkMjLMche71NVHBRzG0fhM_TIJ05dSzXI2OOGPl2&currency=USD"></script>
+  
+      <script>
+          // Render the PayPal button into #paypal-button-container
+          paypal.Buttons({
+  
+              // Set up the transaction
+              createOrder: function(data, actions) {
+                  return actions.order.create({
+                      purchase_units: [{
+                          amount: {
+                              value: '0.99'
+                          }
+                      }]
+                  });
+              },
+  
+              // Finalize the transaction
+              onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                      // Show a success message to the buyer
+                      window.location = "https://zeroequalsfalse.press/cv-gen/";
+                  });
+              }
+  
+  
+          }).render('#paypal-button-container');
+      </script>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <i>Personal website contains website files. Hosting and deployment not included.</i>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
     <section id="wrapper" class="home">
         {{ partial "post-list.html"  . }}
         {{ partial "pagination.html" . }}
